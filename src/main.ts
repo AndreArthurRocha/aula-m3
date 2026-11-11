@@ -42,11 +42,11 @@ const pedidos = ["x-burguer", "refrigerante lata", "batata frita"];
 // preciso percorrer a lista e buscar CADA item no cardápio, e verificar se está lá
 // ou não, se estiver adiciona à mesa7
 
-for (let i = 0; i < pedidos.length; i++){
+for (let i = 0; i < pedidos.length; i++) {
 
     const item = cardapio.buscar(pedidos[i]);
 
-    if (item === undefined){
+    if (item === undefined) {
 
         console.log(pedidos[i] + " não está no cardápio.");
 
@@ -69,3 +69,17 @@ console.log(mesa7.fechar());
 // console.log(burguer.subTotal());
 // console.log(burguer);
 // console.log(burguer.nome);
+
+try {
+
+    mesa7.adicionar(new ItemComanda("suco de manga", 850, 0));
+
+} catch (erro) {
+
+    console.log("Não entrou. " + erro);
+
+}
+
+// const suco = new ItemComanda("suco de caju", 750, 0);
+
+console.log("chegou aqui? ........")
